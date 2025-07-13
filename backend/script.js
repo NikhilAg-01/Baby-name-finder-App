@@ -4,6 +4,8 @@ const cors = require('cors');
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/babynamefinder');
+   then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
 
 app.use(cors());
 app.use(express.json());
